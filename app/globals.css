@@ -1,0 +1,49 @@
+@config "../tailwind.config.ts";
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #10203a;
+  --muted: #f8f9fa;
+  --border: rgba(10, 22, 40, 0.12);
+  --font-inter: "Inter";
+  --font-playfair: "Playfair Display";
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+::selection {
+  background: rgba(201, 168, 76, 0.28);
+  color: #0a1628;
+}
+
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-radial-luxury {
+  background-image: radial-gradient(circle at top, rgba(201, 168, 76, 0.22), transparent 32%);
+}
