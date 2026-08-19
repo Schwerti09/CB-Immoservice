@@ -74,7 +74,7 @@ export default function ContactForm() {
         message: form.message,
       });
 
-      const response = await fetch('/', {
+      const response = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: body.toString(),
@@ -98,7 +98,7 @@ export default function ContactForm() {
           <div>
             <p className="section-kicker">Kontakt</p>
             <h2>Unverbindlich beraten lassen</h2>
-            <form className="contact-form" name="anfrage" data-netlify="true" onSubmit={handleSubmit}>
+            <form className="contact-form" name="anfrage" onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="anfrage" />
               <div className="form-row">
                 <div className="form-field">
