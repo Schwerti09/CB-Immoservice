@@ -1,35 +1,45 @@
+import Link from 'next/link';
+import { company } from './siteContent';
+
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-shell">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3>CBImmoService GmbH</h3>
-            <p className="footer-copy">Rundum-Service fürs Haus – Aus einer Hand.</p>
+            <h3>{company.name}</h3>
+            <p className="footer-copy">{company.slogan} Ihr Immobilienmakler in der Metropolregion Nürnberg.</p>
           </div>
           <div className="footer-links" aria-label="Schnelllinks">
-            <a className="footer-link" href="/#leistungen">
+            <Link className="footer-link" href="/#leistungen">
               Leistungen
-            </a>
-            <a className="footer-link" href="/#kontakt">
+            </Link>
+            <Link className="footer-link" href="/#ueber-uns">
+              Über uns
+            </Link>
+            <Link className="footer-link" href="/#team">
+              Team
+            </Link>
+            <Link className="footer-link" href="/#kontakt">
               Kontakt
-            </a>
-            <a className="footer-link" href="/impressum">
+            </Link>
+            <Link className="footer-link" href="/impressum">
               Impressum
-            </a>
-            <a className="footer-link" href="/datenschutz">
+            </Link>
+            <Link className="footer-link" href="/datenschutz">
               Datenschutz
-            </a>
+            </Link>
           </div>
           <div>
-            <p className="footer-contact">+49 4461 9169 850</p>
-            <p className="footer-contact">info@cbimmoservice.de</p>
-            <p className="footer-contact">Schortens, Deutschland</p>
+            <p className="footer-contact">{company.phone}</p>
+            <p className="footer-contact">{company.email}</p>
+            <p className="footer-contact">{company.addressLine1}</p>
+            <p className="footer-contact">{company.addressLine2}</p>
           </div>
         </div>
         <div className="footer-meta">
-          <span>© {new Date().getFullYear()} CBImmoService GmbH</span>
-          <span>Schortens, Jever, Wilhelmshaven, Wittmund und Umgebung</span>
+          <span>© {new Date().getFullYear()} {company.name}</span>
+          <span>{company.region}</span>
         </div>
       </div>
     </footer>

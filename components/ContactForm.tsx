@@ -1,6 +1,7 @@
 'use client';
 
 import { FormEvent, useEffect, useMemo, useState } from 'react';
+import { company, services } from './siteContent';
 
 type FormState = {
   name: string;
@@ -16,12 +17,7 @@ type RequestEventDetail = {
   message?: string;
 };
 
-const serviceOptions = [
-  'Entrümpelungen',
-  'Gartenpflege',
-  'Handwerkerservice',
-  'Objektbetreuung',
-];
+const serviceOptions = services.map((service) => service.title);
 
 const initialState: FormState = {
   name: '',
@@ -101,7 +97,7 @@ export default function ContactForm() {
         <div className="contact-grid">
           <div>
             <p className="section-kicker">Kontakt</p>
-            <h2>Kostenloses Angebot anfordern</h2>
+            <h2>Unverbindlich beraten lassen</h2>
             <form className="contact-form" name="anfrage" data-netlify="true" onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="anfrage" />
               <div className="form-row">
@@ -192,40 +188,25 @@ export default function ContactForm() {
 
           <aside className="contact-copy">
             <p>
-              Zuverlässiger Partner für Haus, Garten und Immobilie im Landkreis Friesland.
+              Als Immobilienmakler in der Metropolregion Nürnberg stehen wir Ihnen für Kauf,
+              Verkauf, Vermietung, Bewertung und Finanzierung persönlich zur Verfügung.
             </p>
             <div className="contact-stack">
               <div className="contact-panel">
-                <span className="contact-badge">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path d="M6.7 4h2.6l1.3 4.2-1.6 1.6a15 15 0 0 0 5 5l1.6-1.6L20 14.5V17a2 2 0 0 1-2 2A15 15 0 0 1 5 6a2 2 0 0 1 1.7-2Z" />
-                  </svg>
-                  Direkt erreichbar
-                </span>
-                <p className="contact-detail">+49 4461 9169 850</p>
-                <p className="contact-note">Schnelle Reaktionszeiten für Anfragen aus der Region.</p>
+                <span className="contact-badge">Telefon</span>
+                <p className="contact-detail">{company.phone}</p>
+                <p className="contact-note">Montag bis Freitag, persönliche Erreichbarkeit.</p>
               </div>
               <div className="contact-panel">
-                <span className="contact-badge">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path d="M4 6h16v12H4z" />
-                    <path d="m4 7 8 6 8-6" />
-                  </svg>
-                  Per E-Mail
-                </span>
-                <p className="contact-detail">info@cbimmoservice.de</p>
-                <p className="contact-note">Für Angebote, Rückfragen und Terminabstimmungen.</p>
+                <span className="contact-badge">E-Mail</span>
+                <p className="contact-detail">{company.email}</p>
+                <p className="contact-note">Für Exposés, Rückfragen und Terminabstimmung.</p>
               </div>
               <div className="contact-panel">
-                <span className="contact-badge">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8">
-                    <path d="M12 21s7-4.35 7-11a7 7 0 1 0-14 0c0 6.65 7 11 7 11Z" />
-                    <circle cx="12" cy="10" r="2.5" />
-                  </svg>
-                  Vor Ort
-                </span>
-                <p className="contact-detail">Schortens, Deutschland</p>
-                <p className="contact-note">Im Einsatz in Schortens, Jever, Wilhelmshaven, Wittmund und Umgebung.</p>
+                <span className="contact-badge">Standort</span>
+                <p className="contact-detail">{company.addressLine1}</p>
+                <p className="contact-note">{company.addressLine2}</p>
+                <p className="contact-note">Öffnungszeiten: {company.openingHours}</p>
               </div>
             </div>
           </aside>

@@ -1,18 +1,19 @@
-const testimonials = [
+const processSteps = [
   {
-    quote:
-      'Wir waren begeistert – Entrümpelung und Gartenpflege in einer Woche erledigt, pünktlich und zum vereinbarten Preis.',
-    author: 'Familie Hartmann, Schortens',
+    title: '1. Analyse',
+    description: 'Wir erfassen Ziele, Objektstatus und Marktlage in einem strukturierten Erstgespräch.',
   },
   {
-    quote:
-      'Endlich ein Handwerker, der kommt was er verspricht. Kleine Reparaturen schnell und ordentlich.',
-    author: 'M. Schreiber, Jever',
+    title: '2. Strategie',
+    description: 'Sie erhalten eine klare Vermarktungs- und Preisstrategie inkl. Zeitplan.',
   },
   {
-    quote:
-      'Die Objektbetreuung unserer Ferienwohnung läuft seit zwei Jahren reibungslos – absolut empfehlenswert.',
-    author: 'K. Lübbers, Wittmund',
+    title: '3. Umsetzung',
+    description: 'Exposé, Vermarktung, Besichtigungen und Verhandlung aus einer Hand.',
+  },
+  {
+    title: '4. Abschluss',
+    description: 'Begleitung bis zum Notartermin sowie Übergabe und Nachbetreuung.',
   },
 ];
 
@@ -21,17 +22,14 @@ export default function Testimonials() {
     <section className="testimonials-section">
       <div className="section-shell fade-up" data-reveal>
         <div className="section-heading">
-          <p className="section-kicker">Stimmen aus der Region</p>
-          <h2>Was unsere Kunden sagen</h2>
+          <p className="section-kicker">Ablauf</p>
+          <h2>So arbeiten wir zusammen</h2>
         </div>
         <div className="testimonials-track">
-          {testimonials.map((testimonial) => (
-            <article className="testimonial-card" key={testimonial.author}>
-              <span className="testimonial-mark" aria-hidden="true">
-                “
-              </span>
-              <blockquote>{testimonial.quote}</blockquote>
-              <cite>{testimonial.author}</cite>
+          {processSteps.map((step) => (
+            <article className="testimonial-card" key={step.title}>
+              <strong>{step.title}</strong>
+              <p>{step.description}</p>
             </article>
           ))}
         </div>
