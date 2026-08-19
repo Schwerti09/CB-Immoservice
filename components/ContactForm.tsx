@@ -9,6 +9,7 @@ type FormState = {
   service: string;
   message: string;
   privacy: boolean;
+  botField: string;
 };
 
 type RequestEventDetail = {
@@ -30,6 +31,7 @@ const initialState: FormState = {
   service: serviceOptions[0],
   message: '',
   privacy: false,
+  botField: '',
 };
 
 export default function ContactForm() {
@@ -76,9 +78,12 @@ export default function ContactForm() {
         email: form.email,
         service: form.service,
         message: form.message,
+        'bot-field': form.botField,
       });
 
-      const response = await fetch('/', {
+      // Must target the static skeleton, not '/': a POST to '/' is handled by the
+      // Next.js SSR function and never reaches Netlify's form processing.
+      const response = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: body.toString(),
@@ -102,8 +107,23 @@ export default function ContactForm() {
           <div>
             <p className="section-kicker">Kontakt</p>
             <h2>Kostenloses Angebot anfordern</h2>
-            <form className="contact-form" name="anfrage" data-netlify="true" onSubmit={handleSubmit}>
+            <form className="contact-form" name="anfrage" method="POST" onSubmit={handleSubmit}>
+              {/* Netlify Forms is registered via the static skeleton in public/__forms.html.
+                  The `data-netlify` attribute must not appear here: the Next.js runtime
+                  rejects prerendered pages that contain it. */}
               <input type="hidden" name="form-name" value="anfrage" />
+              <p className="hidden-field" aria-hidden="true">
+                <label>
+                  Bitte nicht ausfüllen
+                  <input
+                    name="bot-field"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={form.botField}
+                    onChange={(event) => setForm({ ...form, botField: event.target.value })}
+                  />
+                </label>
+              </p>
               <div className="form-row">
                 <div className="form-field">
                   <label htmlFor="name">Name</label>

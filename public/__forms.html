@@ -1,0 +1,27 @@
+<!doctype html>
+<!--
+  Static form skeleton for Netlify Forms build-time detection.
+
+  The contact form lives in a Next.js client component, which the Netlify build
+  bot cannot scan. @netlify/plugin-nextjs@5 also refuses to upload prerendered
+  pages that contain `data-netlify` attributes, so the attribute must live here
+  instead of in the React markup. Every field submitted by components/ContactForm.tsx
+  must be listed below, and AJAX submissions must POST to /__forms.html.
+-->
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Netlify Forms</title>
+  </head>
+  <body>
+    <form name="anfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="anfrage" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="phone" />
+      <input type="email" name="email" />
+      <input name="service" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
