@@ -1,3 +1,5 @@
+import { company } from './siteContent';
+
 const facts = [
   'Verkauf und Vermietung mit messbarer Strategie',
   'Objektbewertung auf Basis aktueller Marktdaten',
@@ -24,7 +26,7 @@ export default function Trust() {
             <div className="fact-pill" key={fact}>
               <div className="fact-copy">
                 <strong>{fact}</strong>
-                <span>ImmoService GmbH</span>
+                <span>{company.name}</span>
               </div>
             </div>
           ))}
