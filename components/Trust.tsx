@@ -1,40 +1,32 @@
-const facts = [
-  'Über 10 Jahre Erfahrung',
-  'Familiengeführtes Unternehmen',
-  'Festpreise ohne versteckte Kosten',
-  'Alle Leistungen aus einer Hand',
-  'Kostenlose Erstberatung',
-  'Schnelle Reaktionszeiten',
-];
+import { company } from './siteContent';
 
-function TrustIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7">
-      <path d="M12 3 5 6v5c0 5 3.4 8.7 7 10 3.6-1.3 7-5 7-10V6l-7-3Z" />
-      <path d="m9.5 12 1.7 1.7L15 10" />
-    </svg>
-  );
-}
+const facts = [
+  'Verkauf und Vermietung mit messbarer Strategie',
+  'Objektbewertung auf Basis aktueller Marktdaten',
+  'Finanzierungsbegleitung mit regionalen Bankpartnern',
+  'Persönliche Ansprechpartner über den gesamten Prozess',
+  'Transparente Kommunikation und verbindliche Termine',
+  'Erfahrung von Bestand bis Neubauprojekt',
+];
 
 export default function Trust() {
   return (
     <section id="warum-wir" className="trust-section">
       <div className="section-shell fade-up" data-reveal>
         <div className="section-heading">
-          <p className="section-kicker">Vertrauen</p>
-          <h2>Warum CB Immoservice?</h2>
+          <p className="section-kicker">Warum wir</p>
+          <h2>Premium-Service mit Substanz</h2>
           <p>
-            Premium im Auftritt, bodenständig in der Zusammenarbeit: Wir verbinden klare
-            Kommunikation, verlässliche Termine und saubere Ergebnisse.
+            Wir kombinieren lokale Marktkenntnis mit einem professionellen Vermarktungsprozess –
+            für fundierte Entscheidungen und einen reibungslosen Ablauf.
           </p>
         </div>
         <div className="facts-grid">
           {facts.map((fact) => (
             <div className="fact-pill" key={fact}>
-              <TrustIcon />
               <div className="fact-copy">
                 <strong>{fact}</strong>
-                <span>CBImmoService GmbH</span>
+                <span>{company.name}</span>
               </div>
             </div>
           ))}

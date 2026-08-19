@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Datenschutz | CB Immoservice',
-  description: 'Datenschutzerklärung der CBImmoService GmbH.',
+  title: 'Datenschutz | ImmoService GmbH Metropolregion Nürnberg',
+  description: 'Datenschutzerklärung der ImmoService GmbH Metropolregion Nürnberg.',
 };
 
 export default function DatenschutzPage() {
@@ -15,25 +15,37 @@ export default function DatenschutzPage() {
           <pre>
 {`Datenschutzerklärung
 
-Verantwortlicher: CBImmoService GmbH, Schortens, info@cbimmoservice.de
+Verantwortlicher:
+ImmoService GmbH Metropolregion Nürnberg
+Ostendstraße 149, 90482 Nürnberg
+E-Mail: info@immoservice.de
+Telefon: +49 911 23 55 69-0
 
-1. Erhebung und Verarbeitung personenbezogener Daten
-Wir erheben personenbezogene Daten nur, soweit dies zur Erbringung unserer Dienstleistungen erforderlich ist.
+1. Verarbeitung personenbezogener Daten
+Wir verarbeiten personenbezogene Daten ausschließlich im Rahmen der gesetzlichen Vorgaben (DSGVO/BDSG),
+insbesondere zur Bearbeitung von Anfragen, Terminvereinbarungen und der Vertragsanbahnung.
 
-2. Kontaktformular
-Wenn Sie uns über das Kontaktformular kontaktieren, werden Ihre Angaben zur Bearbeitung Ihrer Anfrage und für Rückfragen gespeichert.
+2. Kontakt- und Anfrageformulare
+Wenn Sie uns über Formulare kontaktieren, speichern wir Ihre Angaben zur Bearbeitung Ihres Anliegens
+sowie für mögliche Rückfragen.
 
-3. Ihre Rechte
-Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten sowie das Recht auf Datenübertragbarkeit. Wenden Sie sich hierzu an info@cbimmoservice.de.
+3. Rechtsgrundlagen
+Die Verarbeitung erfolgt nach Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen),
+Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
 
 4. Cookies
-Diese Website verwendet keine Tracking-Cookies. Es werden nur technisch notwendige Cookies eingesetzt.
+Es werden technisch notwendige Cookies gesetzt. Optionale Cookies werden nur nach Ihrer Einwilligung verarbeitet.
 
-5. Hosting
-Diese Website wird über Netlify gehostet. Netlify kann technische Verbindungsdaten erfassen. Weitere Informationen: https://www.netlify.com/privacy/
+5. Ihre Rechte
+Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+Datenübertragbarkeit sowie Beschwerde bei einer Aufsichtsbehörde.
 
-Letzte Aktualisierung: 2024`}
+6. Hosting
+Diese Website wird auf Infrastruktur in der EU bzw. mit geeigneten Garantien gemäß Art. 44 ff. DSGVO betrieben.
+
+Stand: August 2026`}
           </pre>
+          {/* TODO(owner): Datenschutztext mit finaler Fassung der Live-Seite cbimmoservice.de harmonisieren. */}
         </article>
       </section>
     </main>

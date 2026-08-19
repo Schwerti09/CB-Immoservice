@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Impressum | CB Immoservice',
-  description: 'Impressum der CBImmoService GmbH aus Schortens.',
+  title: 'Impressum | ImmoService GmbH Metropolregion Nürnberg',
+  description: 'Impressum der ImmoService GmbH Metropolregion Nürnberg.',
 };
 
 export default function ImpressumPage() {
@@ -15,22 +15,31 @@ export default function ImpressumPage() {
           <pre>
 {`Angaben gemäß § 5 TMG
 
-CBImmoService GmbH
-Schortens, Deutschland
+ImmoService GmbH Metropolregion Nürnberg
+Ostendstraße 149
+90482 Nürnberg
 
-Telefon: +49 4461 9169 850
-E-Mail: info@cbimmoservice.de
+Vertreten durch:
+Geschäftsführer Günter Schenk
 
-Registereintrag: Eingetragen im Handelsregister
-Registergericht: Amtsgericht Aurich
+Kontakt:
+Telefon: +49 911 23 55 69-0
+E-Mail: info@immoservice.de
 
-Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: wird auf Anfrage mitgeteilt
+Handelsregister:
+Amtsgericht Nürnberg, HRB 14670
 
-Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
-CBImmoService GmbH, Schortens
+Umsatzsteuer-ID gemäß § 27a UStG:
+DE 186953147
 
-Haftungsausschluss: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.`}
+Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:
+Günter Schenk, Ostendstraße 149, 90482 Nürnberg
+
+Haftungsausschluss:
+Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
+Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.`}
           </pre>
+          {/* TODO(owner): Impressumsdaten mit Live-Domain cbimmoservice.de final gegenprüfen, sobald der direkte Zugriff wieder möglich ist. */}
         </article>
       </section>
     </main>

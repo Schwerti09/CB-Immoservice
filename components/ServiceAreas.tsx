@@ -1,4 +1,4 @@
-const cities = ['Schortens', 'Jever', 'Wilhelmshaven', 'Wittmund', 'Landkreis Friesland'];
+import { serviceAreas } from './siteContent';
 
 export default function ServiceAreas() {
   return (
@@ -6,21 +6,21 @@ export default function ServiceAreas() {
       <div className="section-shell service-areas-layout fade-up" data-reveal>
         <div className="service-areas-copy">
           <p className="section-kicker">Regional im Einsatz</p>
-          <h2>Unser Einsatzgebiet</h2>
+          <h2>Unser Marktgebiet</h2>
           <p>
-            Wir sind in Schortens, Jever, Wilhelmshaven, Wittmund und dem gesamten
-            Landkreis Friesland für Sie im Einsatz.
+            Unser Schwerpunkt liegt in Nürnberg und der Metropolregion. So sichern wir kurze Wege,
+            realistische Marktpreise und persönliche Betreuung.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#kontakt">
-              Anfrage für Ihre Region
+              Regionale Anfrage starten
             </a>
           </div>
         </div>
         <div className="service-areas-card">
-          <h3>Vor Ort für kurze Wege und schnelle Reaktionen</h3>
+          <h3>Vor Ort vernetzt für schnelle Entscheidungen</h3>
           <div className="city-grid">
-            {cities.map((city) => (
+            {serviceAreas.map((city) => (
               <span className="city-chip" key={city}>
                 {city}
               </span>
