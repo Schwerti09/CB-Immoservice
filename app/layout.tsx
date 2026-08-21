@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ConciergeWidget from "@/components/ConciergeWidget";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { companyName, defaultDescription, defaultMetadata, siteUrl } from "@/lib/metadata";
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Footer />
         </div>
         <ConciergeWidget />
+        <WhatsAppButton />
       </body>
     </html>
   );
