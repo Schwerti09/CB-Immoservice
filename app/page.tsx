@@ -10,6 +10,7 @@ import {
 import ProcessSteps from "@/components/ProcessSteps";
 import ServiceCard from "@/components/ServiceCard";
 import TrustSignals from "@/components/TrustSignals";
+import TrustBadges from "@/components/TrustBadges";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import { createPageMetadata } from "@/lib/metadata";
 import { serviceItems, testimonials } from "@/lib/site-data";
@@ -98,6 +99,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <TrustBadges />
 
       <section className="bg-[#f8f9fa] py-20 sm:py-24">
         <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">

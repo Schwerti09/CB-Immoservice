@@ -96,6 +96,7 @@ export const referenceProjects = [
     description:
       "Neuordnung der Objektkommunikation, Einführung fester Kontrollroutinen und koordinierte Betreuung von Dienstleistern für einen ruhigeren Betriebsablauf.",
     result: "Spürbar schnellere Rückmeldungen und klarere Abläufe für Eigentümer und Bewohner.",
+    imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=70&auto=format&fit=crop",
   },
   {
     title: "Gewerbestandort mit gemischter Nutzung",
@@ -103,6 +104,7 @@ export const referenceProjects = [
     description:
       "Erstellung eines belastbaren Reinigungsplans für frequentierte Gemeinschaftsflächen inklusive Qualitätskontrollen und Abstimmung mit dem Standortmanagement.",
     result: "Konstant repräsentatives Erscheinungsbild auch bei hoher Besucherfrequenz.",
+    imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=70&auto=format&fit=crop",
   },
   {
     title: "Mehrfamilienhaus im Bestand",
@@ -110,6 +112,7 @@ export const referenceProjects = [
     description:
       "Regelmäßige Objektbegehungen, Koordination kleiner Instandsetzungen und strukturierte Dokumentation offener Punkte.",
     result: "Mehr Transparenz über Maßnahmen und eine zuverlässige Präsenz vor Ort.",
+    imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=70&auto=format&fit=crop",
   },
 ];
 

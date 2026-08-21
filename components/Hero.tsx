@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, type Variants } from "framer-motion";
+import { motion, useScroll, useTransform, type Variants } from "framer-motion";
+import { useRef } from "react";
 import { ArrowDown, Building2, CheckCircle2, ConciergeBell, Wrench } from "lucide-react";
 
 const features = [
@@ -21,17 +22,25 @@ const fadeUp: Variants = {
 };
 
 export default function Hero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden" aria-label="Startbereich">
-      {/* Background image */}
-      <Image
-        src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1800&q=80&auto=format&fit=crop"
-        alt="Moderne Wohnanlage – CB Immoservice"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-      />
+    <section ref={containerRef} className="relative flex min-h-screen items-center overflow-hidden" aria-label="Startbereich">
+      {/* Parallax background image – extended height prevents edge-reveal during scroll */}
+      <motion.div
+        className="absolute left-0 top-[-15%] h-[130%] w-full"
+        style={{ y: bgY }}
+      >
+        <Image
+          src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1800&q=80&auto=format&fit=crop"
+          alt="Moderne Wohnanlage – CB Immoservice"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </motion.div>
       {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-navy/75 to-navy/55" />
       {/* Gold top-right glow */}
