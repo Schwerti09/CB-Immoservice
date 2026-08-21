@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { company } from "@/components/siteContent";
 
 function normalizeWhatsAppNumber(input: string) {
-  const trimmedInput = input.trim();
+  const trimmedInput = input.trim().replace(/^tel:/i, "");
   const digits = trimmedInput.replace(/\D+/g, "");
 
   if (!digits) return "";
