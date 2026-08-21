@@ -2,11 +2,14 @@
 
 import { motion } from "framer-motion";
 
-const WHATSAPP_NUMBER = "4915901234567"; // TODO: echte WhatsApp-Nummer eintragen
+// Set NEXT_PUBLIC_WHATSAPP_NUMBER in your environment (digits only, with country code, e.g. 4915901234567)
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
 const WHATSAPP_MESSAGE =
   "Hallo, ich interessiere mich für Ihre Immobilienservices. Könnten Sie mir mehr Informationen zukommen lassen?";
 
 export default function WhatsAppButton() {
+  if (!WHATSAPP_NUMBER) return null;
+
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   return (

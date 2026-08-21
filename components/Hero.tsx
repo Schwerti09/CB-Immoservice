@@ -27,8 +27,11 @@ export default function Hero() {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   return (
     <section ref={containerRef} className="relative flex min-h-screen items-center overflow-hidden" aria-label="Startbereich">
-      {/* Parallax background image */}
-      <motion.div className="absolute inset-0" style={{ y: bgY }}>
+      {/* Parallax background image – extended height prevents edge-reveal during scroll */}
+      <motion.div
+        className="absolute left-0 top-[-15%] h-[130%] w-full"
+        style={{ y: bgY }}
+      >
         <Image
           src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1800&q=80&auto=format&fit=crop"
           alt="Moderne Wohnanlage – CB Immoservice"

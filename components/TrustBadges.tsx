@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Award, Building2, Shield, Star, Users } from "lucide-react";
 
 const badges = [
-  { icon: Shield, label: "IHK-Mitglied", sublabel: "Ihk Oldenburg" },
+  { icon: Shield, label: "IHK-Mitglied", sublabel: "IHK Oldenburg" },
   { icon: Award, label: "Zertifiziert", sublabel: "Qualitätsstandard" },
   { icon: Building2, label: "VDIV-orientiert", sublabel: "Branchenstandards" },
   { icon: Users, label: "Familienunternehmen", sublabel: "Persönlich & regional" },
