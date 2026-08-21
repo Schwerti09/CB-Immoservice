@@ -43,8 +43,8 @@ export const serviceItems = [
 ];
 
 export const trustStats = [
-  { value: "12+", label: "Jahre Branchenerfahrung" },
-  { value: "150+", label: "betreute Einheiten" },
+  { value: "12+", label: "Jahre Erfahrung in der Immobilienbranche" },
+  { value: "124", label: "betreute Einheiten" },
   { value: "98 %", label: "Weiterempfehlungsquote" },
 ];
 
