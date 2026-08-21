@@ -10,6 +10,7 @@ import {
 import ProcessSteps from "@/components/ProcessSteps";
 import ServiceCard from "@/components/ServiceCard";
 import TrustSignals from "@/components/TrustSignals";
+import TestimonialSlider from "@/components/TestimonialSlider";
 import { createPageMetadata } from "@/lib/metadata";
 import { serviceItems, testimonials } from "@/lib/site-data";
 
@@ -17,6 +18,21 @@ const serviceIcons = {
   hausverwaltung: Building2,
   gebaeudereinigung: Sparkles,
   hausmeisterservice: Wrench,
+};
+
+const serviceImages: Record<string, { url: string; alt: string }> = {
+  hausverwaltung: {
+    url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=75&auto=format&fit=crop",
+    alt: "Modernes Wohngebäude – Hausverwaltung",
+  },
+  gebaeudereinigung: {
+    url: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=75&auto=format&fit=crop",
+    alt: "Professionelle Gebäudereinigung",
+  },
+  hausmeisterservice: {
+    url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=75&auto=format&fit=crop",
+    alt: "Hausmeister bei der Arbeit",
+  },
 };
 
 export const metadata = createPageMetadata({
@@ -96,8 +112,9 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {serviceItems.map((service) => {
+            {serviceItems.map((service, index) => {
               const Icon = serviceIcons[service.slug];
+              const img = serviceImages[service.slug];
               return (
                 <ServiceCard
                   key={service.slug}
@@ -106,6 +123,8 @@ export default function Home() {
                   href={service.href}
                   bullets={service.bullets}
                   icon={Icon}
+                  imageUrl={img?.url}
+                  imageAlt={img?.alt}
                 />
               );
             })}
@@ -124,16 +143,8 @@ export default function Home() {
               Vertrauen entsteht durch saubere Leistung
             </h2>
           </div>
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <article
-                key={testimonial.name}
-                className="rounded-[2rem] border border-navy/10 bg-[#fbfbfc] p-8 shadow-lg shadow-navy/5"
-              >
-                <p className="text-lg leading-8 text-navy/75">“{testimonial.quote}”</p>
-                <p className="mt-6 font-semibold text-navy">{testimonial.name}</p>
-              </article>
-            ))}
+          <div className="mt-12">
+            <TestimonialSlider testimonials={testimonials} />
           </div>
         </div>
       </section>

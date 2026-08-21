@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 52" fill="none">
+  <!-- CB mark -->
+  <rect x="0" y="0" width="48" height="48" rx="12" fill="#0a1628"/>
+  <text x="7" y="36" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#c9a84c">CB</text>
+  <!-- wordmark -->
+  <text x="58" y="28" font-family="Georgia, serif" font-size="22" font-weight="600" fill="#0a1628">Immoservice</text>
+  <text x="58" y="44" font-family="Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="3" fill="#c9a84c">PREMIUM</text>
+</svg>
