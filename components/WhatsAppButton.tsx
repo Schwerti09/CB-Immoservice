@@ -10,7 +10,7 @@ function normalizeWhatsAppNumber(input: string) {
   if (!digits) return "";
   if (trimmedInput.startsWith("+")) return digits;
   if (digits.startsWith("00")) return digits.slice(2);
-  if (digits.startsWith("49") && digits.length >= 12) return digits;
+  if (digits.startsWith("49") && digits.length >= 11) return digits;
   if (digits.startsWith("0")) return `49${digits.slice(1)}`;
 
   return `49${digits}`;

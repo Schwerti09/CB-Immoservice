@@ -53,7 +53,7 @@ NEXT_PUBLIC_WHATSAPP_NUMBER=49XXXXXXXXXXX
 
 - Ohne API-Schlüssel arbeitet der Concierge bewusst im **Mock-Modus**.
 - Das Kontaktformular protokolliert Anfragen serverseitig in die Konsole. Eine echte Mail- oder CRM-Anbindung kann später ergänzt werden.
-- `NEXT_PUBLIC_WHATSAPP_NUMBER` akzeptiert deutsche Rufnummern mit oder ohne `+49`, `0049` oder führender `0`; fehlt ein internationales Präfix, wird für den WhatsApp-Link standardmäßig `49` verwendet.
+- `NEXT_PUBLIC_WHATSAPP_NUMBER` akzeptiert deutsche Rufnummern mit oder ohne `+49`, `0049` oder führender `0`; explizite internationale Präfixe (`+` oder `00`) werden übernommen, fehlt ein internationales Präfix, wird für den WhatsApp-Link standardmäßig `49` verwendet.
 
 ## Projektstruktur
 
