@@ -40,20 +40,20 @@ Die Anwendung läuft anschließend standardmäßig unter `http://localhost:3000`
 
 ## Wichtige Umgebungsvariablen
 
-Eine Vorlage liegt in `.env.example`:
-
 ```env
 CONCIERGE_PROVIDER=mock
 GEMINI_API_KEY=
 CLAUDE_API_KEY=
 CONTACT_EMAIL=info@cbimmoservice.de
 NEXT_PUBLIC_APP_URL=https://www.cbimmoservice.de
+NEXT_PUBLIC_WHATSAPP_NUMBER=49XXXXXXXXXXX
 ```
 
 ### Hinweise
 
 - Ohne API-Schlüssel arbeitet der Concierge bewusst im **Mock-Modus**.
 - Das Kontaktformular protokolliert Anfragen serverseitig in die Konsole. Eine echte Mail- oder CRM-Anbindung kann später ergänzt werden.
+- `NEXT_PUBLIC_WHATSAPP_NUMBER` akzeptiert deutsche Rufnummern mit oder ohne `+49`, `0049` oder führender `0`; explizite internationale Präfixe (`+` oder `00`) werden übernommen, fehlt ein internationales Präfix, wird für den WhatsApp-Link standardmäßig `49` verwendet.
 
 ## Projektstruktur
 

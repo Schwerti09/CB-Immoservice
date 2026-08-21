@@ -1,9 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { company } from "@/components/siteContent";
 
-// Set NEXT_PUBLIC_WHATSAPP_NUMBER in your environment (digits only, with country code, e.g. 4915901234567)
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
+function normalizeWhatsAppNumber(input: string) {
+  const trimmedInput = input.trim().replace(/^tel:/i, "");
+  const digits = trimmedInput.replace(/\D+/g, "");
+
+  if (!digits) return "";
+  if (trimmedInput.startsWith("+")) return digits;
+  if (digits.startsWith("00")) return digits.slice(2);
+  if (digits.startsWith("49") && digits.length >= 11) return digits;
+  if (digits.startsWith("0")) return `49${digits.slice(1)}`;
+
+  return `49${digits}`;
+}
+
+const WHATSAPP_NUMBER = normalizeWhatsAppNumber(
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? company.phoneHref ?? company.phone,
+);
 const WHATSAPP_MESSAGE =
   "Hallo, ich interessiere mich für Ihre Immobilienservices. Könnten Sie mir mehr Informationen zukommen lassen?";
 
