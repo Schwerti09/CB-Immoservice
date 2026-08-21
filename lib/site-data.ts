@@ -135,13 +135,16 @@ export const teamPlaceholders = [
   {
     role: "Geschäftsführung",
     description: "Strategische Kundenbetreuung und Qualitätssteuerung über alle Leistungsbereiche hinweg.",
+    imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=70&auto=format&fit=crop",
   },
   {
     role: "Objektkoordination",
     description: "Zentrale Schnittstelle für Eigentümer, Bewohner, Dienstleister und operative Umsetzung.",
+    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=70&auto=format&fit=crop",
   },
   {
     role: "Service-Team vor Ort",
     description: "Regelmäßige Präsenz für Kontrolle, Pflege, Reinigung und schnelle Reaktion im Objektalltag.",
+    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=70&auto=format&fit=crop",
   },
 ];

@@ -24,9 +24,10 @@ export default function TestimonialSlider({ testimonials }: { testimonials: Test
     return () => { emblaApi.off("select", onSelect); };
   }, [emblaApi]);
 
-  // Auto-advance every 5 seconds
+  // Auto-advance every 5 seconds, respecting prefers-reduced-motion
   useEffect(() => {
     if (!emblaApi) return;
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const id = setInterval(() => emblaApi.scrollNext(), 5000);
     return () => clearInterval(id);
   }, [emblaApi]);

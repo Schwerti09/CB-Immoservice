@@ -93,17 +93,11 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {teamPlaceholders.map((member, index) => (
+            {teamPlaceholders.map((member) => (
               <article key={member.role} className="overflow-hidden rounded-[2rem] border border-navy/10 bg-white shadow-lg shadow-navy/5">
                 <div className="relative h-48 w-full overflow-hidden bg-navy/5">
                   <Image
-                    src={
-                      index === 0
-                        ? "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=70&auto=format&fit=crop"
-                        : index === 1
-                          ? "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=70&auto=format&fit=crop"
-                          : "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=70&auto=format&fit=crop"
-                    }
+                    src={member.imageUrl}
                     alt={`${member.role} – CB Immoservice`}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"

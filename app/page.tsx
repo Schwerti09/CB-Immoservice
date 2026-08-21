@@ -112,7 +112,7 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {serviceItems.map((service, index) => {
+            {serviceItems.map((service) => {
               const Icon = serviceIcons[service.slug];
               const img = serviceImages[service.slug];
               return (
