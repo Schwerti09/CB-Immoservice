@@ -52,6 +52,20 @@ export const testimonials = [
 
 export const mainServices = [
   {
+    title: 'Objektbetreuung',
+    subline: 'Wir kümmern uns, auch wenn Sie nicht da sind',
+    text: 'Ob Ferienhaus, Mehrfamilienhaus, Mietobjekt oder Leerstand: Wir sorgen für Sicherheit, Sauberkeit und Ordnung durch regelmäßige Kontrollen.',
+    emoji: '🔑',
+    cta: 'Objektbetreuung anfragen',
+  },
+  {
+    title: 'Handwerkerservice',
+    subline: 'Reparieren, Montieren, Verschönern',
+    text: 'Wir erledigen kleine Reparaturen, Möbelmontage und Renovierungsarbeiten zuverlässig, sauber und detailgenau.',
+    emoji: '🛠️',
+    cta: 'Handwerkerservice buchen',
+  },
+  {
     title: 'Entrümpelungen',
     subline: 'Platz schaffen, ganz ohne Stress',
     text: 'Wir entrümpeln Keller, Dachboden, Garage oder ganze Immobilien schnell, gründlich und diskret. Von der Sortierung über den Abtransport bis zur fachgerechten Entsorgung übernehmen wir alles – ideal für Haushaltsauflösungen, Wohnungswechsel sowie vor oder nach einem Immobilienverkauf. Ablauf: Besichtigung → Angebot → Durchführung.',
@@ -64,20 +78,6 @@ export const mainServices = [
     text: 'Von der Rasenpflege bis zum Heckenschnitt übernehmen wir Gartenarbeiten zuverlässig – regelmäßig oder einmalig.',
     emoji: '🌿',
     cta: 'Gartenpflege-Angebot anfordern',
-  },
-  {
-    title: 'Handwerkerservice',
-    subline: 'Reparieren, Montieren, Verschönern',
-    text: 'Wir erledigen kleine Reparaturen, Möbelmontage und Renovierungsarbeiten zuverlässig, sauber und detailgenau.',
-    emoji: '🛠️',
-    cta: 'Handwerkerservice buchen',
-  },
-  {
-    title: 'Objektbetreuung',
-    subline: 'Wir kümmern uns, auch wenn Sie nicht da sind',
-    text: 'Ob Ferienhaus, Mehrfamilienhaus, Mietobjekt oder Leerstand: Wir sorgen für Sicherheit, Sauberkeit und Ordnung durch regelmäßige Kontrollen.',
-    emoji: '🔑',
-    cta: 'Objektbetreuung anfragen',
   },
 ];
 

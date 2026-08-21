@@ -130,8 +130,8 @@ export default function Hero() {
           </ul>
           <div className="mt-8 border-t border-white/10 pt-6">
             <p className="text-sm leading-7 text-white/60">
-              Über <span className="font-semibold text-gold">12 Jahre</span> Erfahrung · Mehr als{" "}
-              <span className="font-semibold text-gold">150</span> betreute Einheiten
+              Über <span className="font-semibold text-gold">12 Jahre</span> Erfahrung in der Immobilienbranche · Mehr als{" "}
+              <span className="font-semibold text-gold">124</span> betreute Einheiten
             </p>
           </div>
         </motion.div>
