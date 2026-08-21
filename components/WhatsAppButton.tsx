@@ -10,9 +10,10 @@ function normalizeWhatsAppNumber(input: string) {
   if (!digits) return "";
   if (trimmedInput.startsWith("+")) return digits;
   if (digits.startsWith("00")) return digits.slice(2);
+  if (digits.startsWith("49")) return digits;
   if (digits.startsWith("0")) return `49${digits.slice(1)}`;
 
-  return digits;
+  return `49${digits}`;
 }
 
 const WHATSAPP_NUMBER = normalizeWhatsAppNumber(
