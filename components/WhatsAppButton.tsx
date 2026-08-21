@@ -5,7 +5,7 @@ import { company } from "@/components/siteContent";
 
 function normalizeWhatsAppNumber(input: string) {
   const trimmedInput = input.trim();
-  const digits = input.replace(/\D+/g, "");
+  const digits = trimmedInput.replace(/\D+/g, "");
 
   if (!digits) return "";
   if (trimmedInput.startsWith("+")) return digits;
