@@ -21,20 +21,6 @@ const fadeUp: Variants = {
 };
 
 export default function Hero() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  const openAppointmentModal = () => {
-    window.dispatchEvent(new CustomEvent('cb:open-appointment', { detail: { source: 'hero' } }));
-  };
-
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden" aria-label="Startbereich">
       {/* Background image */}
