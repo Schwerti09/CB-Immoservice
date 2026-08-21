@@ -96,12 +96,14 @@ function GoldParticle({
   size,
   delay,
   duration,
+  repeatDelay,
 }: {
   x: number;
   y: number;
   size: number;
   delay: number;
   duration: number;
+  repeatDelay: number;
 }) {
   return (
     <motion.div
@@ -117,7 +119,7 @@ function GoldParticle({
         duration,
         delay,
         repeat: Infinity,
-        repeatDelay: Math.random() * 4 + 2,
+        repeatDelay,
         ease: "easeInOut",
       }}
     />
@@ -131,6 +133,7 @@ const particles = Array.from({ length: 18 }, (_, i) => ({
   size: 2 + Math.random() * 4,
   delay: Math.random() * 5,
   duration: 3 + Math.random() * 3,
+  repeatDelay: Math.random() * 4 + 2,
 }));
 
 /* ─── component ─────────────────────────────────────────── */
